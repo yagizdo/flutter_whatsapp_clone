@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -8,8 +9,72 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  var numbers = const <Widget>[
+    Text('+90'),
+    Text('+61'),
+    Text('+16'),
+    Text('+645'),
+    Text('+86'),
+    Text('+786'),
+  ];
+
+  String? selectedValue;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Enter Your Phone Number'),
+        centerTitle: true,
+        elevation: 2,
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        actions:  [
+          TextButton(onPressed: selectedValue == null ? null : () {
+
+          }, child: Text('Done'))
+        ],
+      ),
+      body: Column(
+        children:  [
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 20),
+            child: Text('WhatsApp will send an SMS message to verify your phone number (carrier changes may apply).',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),textAlign: TextAlign.center,),
+          ),
+          ElevatedButton(onPressed: () {
+            showPicker();
+          }, child: Text(selectedValue ?? 'Select Value')),
+          Text(selectedValue ?? numbers[5].toString()),
+        ],
+      ),
+    );
   }
+  void showPicker()
+  {  showCupertinoModalPopup(
+      context: context,
+      builder: (BuildContext builder) {
+        return Container(
+            height: MediaQuery.of(context).copyWith().size.height*0.25,
+            color: Colors.white,
+            child: CupertinoPicker(
+              children: numbers,
+              onSelectedItemChanged: (value){
+                Text number = numbers[value] ?? Text'';
+                selectedValue = number;
+                setState(() {
+
+                });
+              },
+              itemExtent: 25,
+              diameterRatio:1,
+              useMagnifier: true,
+              magnification: 1.3,
+              looping: true,
+            )
+        );
+      }
+  );
+  }
+
 }
+
+
