@@ -40,41 +40,11 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 20),
             child: Text('WhatsApp will send an SMS message to verify your phone number (carrier changes may apply).',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),textAlign: TextAlign.center,),
           ),
-          ElevatedButton(onPressed: () {
-            showPicker();
-          }, child: Text(selectedValue ?? 'Select Value')),
-          Text(selectedValue ?? numbers[5].toString()),
+          ElevatedButton(onPressed: () {},child : Text('Select Number')),
         ],
       ),
     );
   }
-  void showPicker()
-  {  showCupertinoModalPopup(
-      context: context,
-      builder: (BuildContext builder) {
-        return Container(
-            height: MediaQuery.of(context).copyWith().size.height*0.25,
-            color: Colors.white,
-            child: CupertinoPicker(
-              children: numbers,
-              onSelectedItemChanged: (value){
-                Text number = numbers[value] ?? Text'';
-                selectedValue = number;
-                setState(() {
-
-                });
-              },
-              itemExtent: 25,
-              diameterRatio:1,
-              useMagnifier: true,
-              magnification: 1.3,
-              looping: true,
-            )
-        );
-      }
-  );
   }
-
-}
 
 
