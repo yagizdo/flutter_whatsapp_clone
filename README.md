@@ -1,16 +1,57 @@
-# whatsapp_clone
+# Flutter - Whatsapp Clone
 
-A new Flutter project.
+Whatsapp Clone App I made with Flutter.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Run Locally
 
-A few resources to get you started if this is your first Flutter project:
+Clone the project
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```bash
+  git clone https://github.com/yagizdo/flutter_whatsapp_clone
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Go to the project directory
+
+```bash
+  cd flutter-whatsapp-clone-master
+```
+
+Install dependencies
+
+```bash
+  flutter pub get
+```
+
+Run App
+
+```bash
+  flutter run
+```
+
+
+## What will be add :question:
+
+- [x] Splash Screen
+- [ ] Auth with Phone number
+- [ ] Dark Mode
+- [ ] Message slides with slidable(unread,archive etc.)
+- [ ] Onboarding Screen(get user name and profile pic)
+- [ ] Chat Screen
+- [ ] Image Picker(For profile pic)
+- [ ] State Management
+- [ ] Profile Page
+- [ ] Settings Page
+
+
+##  Libraries I use in the application:
+- Animated Splash Screen : https://pub.dev/packages/animated_splash_screen
+
+## Screenshots
+
+### Splash Screen 
+<img align="center" width="400" height="700" src="screenshots/splash_screen.png">
+
+## Contributing
+
+Contributions are always welcome!
