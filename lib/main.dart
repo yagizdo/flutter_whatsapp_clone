@@ -1,6 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Screens/number_login.dart';
+import 'package:whatsapp_clone/Utils/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      onGenerateRoute: Routes.generateRoute,
       home: AnimatedSplashScreen(
         nextScreen: const LoginScreen(),
         splash: Center(

@@ -28,23 +28,25 @@ class _LoginScreenState extends State<LoginScreen> {
         elevation: 2,
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
-        actions:  [
-          TextButton(onPressed: selectedValue == null ? null : () {
-
-          }, child: Text('Done'))
+        actions: [
+          TextButton(
+              onPressed: selectedValue == null ? null : () {},
+              child: const Text('Done'))
         ],
       ),
       body: Column(
-        children:  [
+        children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 20),
-            child: Text('WhatsApp will send an SMS message to verify your phone number (carrier changes may apply).',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 15),textAlign: TextAlign.center,),
+            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+            child: Text(
+              'WhatsApp will send an SMS message to verify your phone number (carrier changes may apply).',
+              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+              textAlign: TextAlign.center,
+            ),
           ),
-          ElevatedButton(onPressed: () {},child : Text('Select Number')),
+          ElevatedButton(onPressed: () {}, child: const Text('Select Number')),
         ],
       ),
     );
   }
-  }
-
-
+}
