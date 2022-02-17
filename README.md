@@ -50,7 +50,7 @@ Run App
 ## Screenshots
 
 ### Splash Screen 
-<img align="center" width="400" height="700" src="screenshots/splash_screen.png">
+<img align="center" width="400" height="700" src="Screenshots/splash_screen.png">
 
 ## Contributing
 
