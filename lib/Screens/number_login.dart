@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:whatsapp_clone/Providers/theme_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -26,8 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
         title: const Text('Enter Your Phone Number'),
         centerTitle: true,
         elevation: 2,
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
         actions: [
           TextButton(
               onPressed: selectedValue == null ? null : () {},

@@ -34,7 +34,7 @@ Run App
 
 - [x] Splash Screen
 - [ ] Auth with Phone number
-- [ ] Dark Mode
+- [x] Dark Mode
 - [ ] Message slides with slidable(unread,archive etc.)
 - [ ] Onboarding Screen(get user name and profile pic)
 - [ ] Chat Screen
@@ -46,6 +46,9 @@ Run App
 
 ##  Libraries I use in the application:
 - Animated Splash Screen : https://pub.dev/packages/animated_splash_screen
+- Provider : https://pub.dev/packages/provider
+- Shared Preferences : https://pub.dev/packages/shared_preferences
+- Hex Color : https://pub.dev/packages/hexcolor
 
 ## Screenshots
 
