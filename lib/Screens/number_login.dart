@@ -31,8 +31,9 @@ class _LoginScreenState extends State<LoginScreen> {
         shadowColor: Colors.white,
         actions: [
           TextButton(
-              onPressed:
-                  () {}, //numberController.text.contains('') ? null : () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/home');
+              }, //numberController.text.contains('') ? null : () {},
               child: const Text('Done'))
         ],
       ),
