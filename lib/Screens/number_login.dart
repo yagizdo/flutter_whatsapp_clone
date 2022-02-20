@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:whatsapp_clone/Providers/theme_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -21,6 +19,8 @@ class _LoginScreenState extends State<LoginScreen> {
   ];
 
   String? selectedValue;
+  var numberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,8 @@ class _LoginScreenState extends State<LoginScreen> {
         shadowColor: Colors.white,
         actions: [
           TextButton(
-              onPressed: selectedValue == null ? null : () {},
+              onPressed:
+                  () {}, //numberController.text.contains('') ? null : () {},
               child: const Text('Done'))
         ],
       ),
@@ -45,7 +46,17 @@ class _LoginScreenState extends State<LoginScreen> {
               textAlign: TextAlign.center,
             ),
           ),
-          ElevatedButton(onPressed: () {}, child: const Text('Select Number')),
+          // TODO Buraya numara kontrolü ekle ve done butonunun aktifleşme olayına bak
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: TextField(
+              keyboardType: TextInputType.number,
+              controller: numberController,
+              decoration: InputDecoration(hintText: 'Your phone number'),
+              textAlign: TextAlign.center,
+            ),
+          )
+          //ElevatedButton(onPressed: () {}, child: const Text('Select Number')),
         ],
       ),
     );
