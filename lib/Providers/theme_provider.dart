@@ -17,6 +17,8 @@ class ThemeProvider with ChangeNotifier {
     brightness: Brightness.dark,
     // Appbar
     appBarTheme: AppBarTheme(
+      elevation: 0,
+      shadowColor: Colors.grey,
       color: HexColor('#1B262C'),
     ),
     // Elevated Button
@@ -29,8 +31,11 @@ class ThemeProvider with ChangeNotifier {
 
   final lightTheme = ThemeData(
       primaryColor: Colors.white,
-      appBarTheme: const AppBarTheme(
-          color: Colors.white,
+      navigationBarTheme:
+          NavigationBarThemeData(backgroundColor: HexColor('#EFEFF4')),
+      appBarTheme: AppBarTheme(
+          elevation: 0,
+          color: HexColor('#EFEFF4'),
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 16)),
       brightness: Brightness.light,
       iconTheme: const IconThemeData(color: Colors.white),

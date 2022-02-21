@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:provider/provider.dart';
-import 'package:whatsapp_clone/Providers/theme_provider.dart';
 import 'package:whatsapp_clone/Screens/call_screen.dart';
 import 'package:whatsapp_clone/Screens/camera_screen.dart';
 import 'package:whatsapp_clone/Screens/chatscreen.dart';
@@ -25,32 +23,10 @@ class _HomePageState extends State<HomePage> {
     ChatScreen(),
     SettingsScreen(),
   ];
-  int selectedIndex = 0;
+  int selectedIndex = 3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          elevation: 2,
-          title: Text('Chats'),
-          leading: TextButton(
-            child: Text('Edit'),
-            onPressed: () {},
-          ),
-          actions: [
-            Consumer<ThemeProvider>(builder: (context, theme, child) {
-              return IconButton(
-                onPressed: () {
-                  ThemeProvider.readData('themeMode').then((value) {
-                    value == 'light'
-                        ? theme.setDarkMode()
-                        : theme.setLightMode();
-                  });
-                },
-                icon: SvgPicture.asset('lib/Assets/editicon.svg'),
-                color: Colors.black,
-              );
-            })
-          ]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         landscapeLayout: BottomNavigationBarLandscapeLayout.centered,

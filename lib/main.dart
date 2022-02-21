@@ -1,7 +1,6 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:whatsapp_clone/Screens/number_login.dart';
+import 'package:whatsapp_clone/Screens/home_page.dart';
 import 'package:whatsapp_clone/Utils/routes.dart';
 
 import 'Providers/theme_provider.dart';
@@ -25,15 +24,16 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: state.getTheme(),
         onGenerateRoute: Routes.generateRoute,
-        home: AnimatedSplashScreen(
+        home: HomePage(),
+        /*home: AnimatedSplashScreen(
           nextScreen: const LoginScreen(),
           splash: Center(
             child: Container(
               alignment: Alignment.center,
               //TODO add dark mode check for splash screen
-              /*color: state.getTheme().toString() == 'light'
+              */ /*color: state.getTheme().toString() == 'light'
                   ? Colors.white
-                  : Colors.black,*/
+                  : Colors.black,*/ /*
               color: Colors.black,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
           ),
           duration: 2000,
           splashIconSize: 1000,
-        ),
+        ),*/
       ),
     );
   }

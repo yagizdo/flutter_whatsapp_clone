@@ -7,7 +7,7 @@ class MessagesList extends StatelessWidget {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      height: MediaQuery.of(context).size.height / 1.28,
+      height: screenSize.height / 1.51,
       child: ListView.builder(
           itemCount: 22,
           itemBuilder: (context, index) {
