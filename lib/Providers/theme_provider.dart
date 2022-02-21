@@ -7,6 +7,7 @@ class ThemeProvider with ChangeNotifier {
   SharedPreferences? sharedPreferences;
 
   final darkTheme = ThemeData(
+    cardColor: HexColor('#1c1c1e'),
     //Text Button
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(

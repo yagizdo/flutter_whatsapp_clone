@@ -24,16 +24,13 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: state.getTheme(),
         onGenerateRoute: Routes.generateRoute,
-        home: HomePage(),
-        /*home: AnimatedSplashScreen(
+        home: const HomePage(),
+        /*AnimatedSplashScreen(
           nextScreen: const LoginScreen(),
           splash: Center(
             child: Container(
               alignment: Alignment.center,
               //TODO add dark mode check for splash screen
-              */ /*color: state.getTheme().toString() == 'light'
-                  ? Colors.white
-                  : Colors.black,*/ /*
               color: Colors.black,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
