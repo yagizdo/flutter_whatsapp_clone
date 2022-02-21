@@ -25,7 +25,7 @@ class ChatScreen extends StatelessWidget {
             Consumer<ThemeProvider>(builder: (context, theme, child) {
               return IconButton(
                 onPressed: () {
-                  ThemeProvider.readData('themeMode').then((value) {
+                  ThemeProvider().readData('themeMode').then((value) {
                     value == 'light'
                         ? theme.setDarkMode()
                         : theme.setLightMode();

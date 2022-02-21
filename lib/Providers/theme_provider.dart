@@ -7,7 +7,8 @@ class ThemeProvider with ChangeNotifier {
   SharedPreferences? sharedPreferences;
 
   final darkTheme = ThemeData(
-    cardColor: HexColor('#1c1c1e'),
+    dividerTheme: DividerThemeData(color: Colors.grey),
+    cardTheme: CardTheme(color: HexColor('#1c1c1e'), elevation: 0),
     //Text Button
     textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
@@ -31,6 +32,9 @@ class ThemeProvider with ChangeNotifier {
   );
 
   final lightTheme = ThemeData(
+      dividerTheme: DividerThemeData(color: Colors.grey),
+      dividerColor: Colors.blue,
+      cardTheme: CardTheme(color: Colors.white, elevation: 0),
       primaryColor: Colors.white,
       navigationBarTheme:
           NavigationBarThemeData(backgroundColor: HexColor('#EFEFF4')),
@@ -40,7 +44,7 @@ class ThemeProvider with ChangeNotifier {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 16)),
       brightness: Brightness.light,
       iconTheme: const IconThemeData(color: Colors.white),
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: HexColor('#EFEFF4'),
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
         primary: Colors.blue,
@@ -72,9 +76,10 @@ class ThemeProvider with ChangeNotifier {
     }
   }
 
-  static Future<dynamic> readData(String key) async {
+  Future<dynamic> readData(String key) async {
     final prefs = await SharedPreferences.getInstance();
     dynamic obj = prefs.get(key);
+    print('obj : $obj');
     return obj;
   }
 
