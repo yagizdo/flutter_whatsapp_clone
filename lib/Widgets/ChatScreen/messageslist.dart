@@ -11,27 +11,25 @@ class MessagesList extends StatelessWidget {
       child: ListView.builder(
           itemCount: 22,
           itemBuilder: (context, index) {
-            return Container(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ListTile(
-                      title: const Text('Yılmaz Yağız Dokumacı'),
-                      subtitle: const Text('Ben..Ben bir mesajım..'),
-                      minVerticalPadding: 15,
-                      leading: const CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(
-                          'lib/Assets/yagophoto.jpg',
-                        ),
-                      ),
-                      trailing: Column(
-                        children: const [Text('12.41 pm')],
+            return Row(
+              children: [
+                Expanded(
+                  child: ListTile(
+                    title: const Text('Yılmaz Yağız Dokumacı'),
+                    subtitle: const Text('Ben..Ben bir mesajım..'),
+                    minVerticalPadding: 15,
+                    leading: const CircleAvatar(
+                      radius: 30,
+                      backgroundImage: AssetImage(
+                        'lib/Assets/yagophoto.jpg',
                       ),
                     ),
-                  )
-                ],
-              ),
+                    trailing: Column(
+                      children: const [Text('12.41 pm')],
+                    ),
+                  ),
+                )
+              ],
             );
           }),
     );
