@@ -16,10 +16,12 @@ class MessagesList extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ListTile(
-                      title: Text('Yılmaz Yağız Dokumacı'),
-                      subtitle: Text('Ben..Ben bir mesajım..'),
-                      leading: CircleAvatar(
-                        child: Image.asset(
+                      title: const Text('Yılmaz Yağız Dokumacı'),
+                      subtitle: const Text('Ben..Ben bir mesajım..'),
+                      minVerticalPadding: 15,
+                      leading: const CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage(
                           'lib/Assets/yagophoto.jpg',
                         ),
                       ),
