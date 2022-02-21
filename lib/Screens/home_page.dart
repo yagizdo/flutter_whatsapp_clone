@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../Widgets/HomePage/messageslist.dart';
+import 'package:provider/provider.dart';
+import 'package:whatsapp_clone/Providers/theme_provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,11 +22,19 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {},
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.message),
-              color: Colors.black,
-            )
+            Consumer<ThemeProvider>(builder: (context, theme, child) {
+              return IconButton(
+                onPressed: () {
+                  ThemeProvider.readData('themeMode').then((value) {
+                    value == 'light'
+                        ? theme.setDarkMode()
+                        : theme.setLightMode();
+                  });
+                },
+                icon: Icon(Icons.message),
+                color: Colors.black,
+              );
+            })
           ]),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -66,7 +74,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Column(
-        children: [MessagesList()],
+        children: [],
       ),
     );
   }

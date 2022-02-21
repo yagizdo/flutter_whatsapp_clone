@@ -9,7 +9,7 @@ class MessagesList extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height / 1.3,
       child: ListView.builder(
-          itemCount: 5,
+          itemCount: 22,
           itemBuilder: (context, index) {
             return Container(
               color: Colors.white,
@@ -18,7 +18,7 @@ class MessagesList extends StatelessWidget {
                   Expanded(
                     child: ListTile(
                       title: Text('Yılmaz Yağız Dokumacı'),
-                      subtitle: Text('Messages deneme babalık'),
+                      subtitle: Text('Ben..Ben bir mesajım..'),
                       leading: CircleAvatar(
                         child: Image.network(
                             'https://yagizdokumaci.com/img/yagophoto.jpg'),
