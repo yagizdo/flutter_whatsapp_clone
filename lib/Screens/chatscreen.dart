@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:provider/provider.dart';
 
-import '../Providers/theme_provider.dart';
 import '../Widgets/ChatScreen/messageslist.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -22,19 +20,11 @@ class ChatScreen extends StatelessWidget {
             onPressed: () {},
           ),
           actions: [
-            Consumer<ThemeProvider>(builder: (context, theme, child) {
-              return IconButton(
-                onPressed: () {
-                  ThemeProvider().readData('themeMode').then((value) {
-                    value == 'light'
-                        ? theme.setDarkMode()
-                        : theme.setLightMode();
-                  });
-                },
-                icon: SvgPicture.asset('lib/Assets/editicon.svg'),
-                color: Colors.black,
-              );
-            })
+            IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset('lib/Assets/editicon.svg'),
+              color: Colors.black,
+            ),
           ]),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

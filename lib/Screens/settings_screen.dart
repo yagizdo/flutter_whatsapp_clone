@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Widgets/Settings%20Screen/settingst_title.dart';
+import 'package:whatsapp_clone/Widgets/Settings%20Screen/settings_title.dart';
 
 import '../Widgets/Settings Screen/setting_card.dart';
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-
-import '../../Providers/theme_provider.dart';
+import 'package:whatsapp_clone/Providers/theme_provider.dart';
 
 class SettingsTitle extends StatelessWidget {
   const SettingsTitle({Key? key}) : super(key: key);
@@ -45,7 +44,13 @@ class SettingsTitle extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 60.0),
+                padding: const EdgeInsets.only(left: 30.0),
+                child: GestureDetector(
+                    onTap: () {},
+                    child: SvgPicture.asset('lib/Assets/camerabuttonicon.svg')),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30.0),
                 child:
                     Consumer<ThemeProvider>(builder: (context, theme, child) {
                   return GestureDetector(
@@ -56,8 +61,11 @@ class SettingsTitle extends StatelessWidget {
                               : theme.setLightMode();
                         });
                       },
-                      child:
-                          SvgPicture.asset('lib/Assets/camerabuttonicon.svg'));
+                      child: SvgPicture.asset(
+                        'lib/Assets/darkmodeicon.svg',
+                        width: 20,
+                        color: Theme.of(context).secondaryHeaderColor,
+                      ));
                 }),
               ),
             ],

@@ -7,7 +7,7 @@ class ThemeProvider with ChangeNotifier {
   SharedPreferences? sharedPreferences;
 
   final darkTheme = ThemeData(
-    // Text color
+    // Text and Icon color
     secondaryHeaderColor: Colors.white,
     dividerTheme: DividerThemeData(color: Colors.grey),
     cardTheme: CardTheme(color: HexColor('#1c1c1e'), elevation: 0),
@@ -48,7 +48,7 @@ class ThemeProvider with ChangeNotifier {
           color: HexColor('#EFEFF4'),
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 16)),
       brightness: Brightness.light,
-      iconTheme: const IconThemeData(color: Colors.white),
+      iconTheme: const IconThemeData(color: Colors.black),
       scaffoldBackgroundColor: HexColor('#EFEFF4'),
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
