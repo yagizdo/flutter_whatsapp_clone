@@ -41,6 +41,7 @@ dependencies:
   flutter_svg: ^1.0.3
   toggle_switch: ^1.4.0
   flutter_slidable: ^1.2.0
+  cupertino_list_tile: ^0.2.1
 
 dev_dependencies:
   flutter_test:
