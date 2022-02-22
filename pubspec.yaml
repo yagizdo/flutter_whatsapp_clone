@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.0.2
   hexcolor: ^2.0.5
   flutter_svg: ^1.0.3
+  toggle_switch: ^1.4.0
 
 dev_dependencies:
   flutter_test:
