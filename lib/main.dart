@@ -1,9 +1,10 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:whatsapp_clone/Screens/home_page.dart';
 import 'package:whatsapp_clone/Utils/routes.dart';
 
 import 'Providers/theme_provider.dart';
+import 'Screens/number_login.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<ThemeProvider>(
@@ -24,14 +25,13 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: state.getTheme(),
         onGenerateRoute: Routes.generateRoute,
-        home: const HomePage(),
-        /*AnimatedSplashScreen(
+        home: AnimatedSplashScreen(
           nextScreen: const LoginScreen(),
           splash: Center(
             child: Container(
               alignment: Alignment.center,
               //TODO add dark mode check for splash screen
-              color: Colors.black,
+              color: Theme.of(context).splashColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
           ),
           duration: 2000,
           splashIconSize: 1000,
-        ),*/
+        ),
       ),
     );
   }

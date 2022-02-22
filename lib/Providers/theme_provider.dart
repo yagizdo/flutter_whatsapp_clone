@@ -7,6 +7,7 @@ class ThemeProvider with ChangeNotifier {
   SharedPreferences? sharedPreferences;
 
   final darkTheme = ThemeData(
+    splashColor: Colors.black,
     // Text and Icon color
     secondaryHeaderColor: Colors.white,
     dividerTheme: DividerThemeData(color: Colors.grey),
@@ -34,6 +35,7 @@ class ThemeProvider with ChangeNotifier {
   );
 
   final lightTheme = ThemeData(
+      splashColor: Colors.white,
       // Text color
       secondaryHeaderColor: Colors.black,
       // Divider color
