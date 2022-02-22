@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class MessageCard extends StatelessWidget {
   MessageCard(
@@ -19,19 +21,37 @@ class MessageCard extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: ListTile(
-            title: Text(name),
-            subtitle: Text(message),
-            minVerticalPadding: 15,
-            leading: CircleAvatar(
-              radius: 30,
-              backgroundImage: AssetImage(
-                profilepic,
-              ),
+          child: Slidable(
+            endActionPane: ActionPane(
+              motion: ScrollMotion(),
+              children: [
+                SlidableAction(
+                    backgroundColor: HexColor('#C6C6CC'),
+                    foregroundColor: Colors.white,
+                    label: 'More',
+                    icon: Icons.more_horiz,
+                    onPressed: (context) {}),
+                SlidableAction(
+                    backgroundColor: HexColor('#3E70A7'),
+                    label: 'Archive',
+                    icon: Icons.archive,
+                    onPressed: (context) {}),
+              ],
             ),
-            trailing: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text(time)],
+            child: ListTile(
+              title: Text(name),
+              subtitle: Text(message),
+              minVerticalPadding: 15,
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage(
+                  profilepic,
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [Text(time)],
+              ),
             ),
           ),
         )
